@@ -1,1 +1,70 @@
+class Program
+{
+    static void Main()
+    {
+        // Solicita a idade do usuário
+        Console.Write("Digite a sua idade: ");
+        int idade = int.Parse(Console.ReadLine());
+
+        // Verifica se o usuário é maior de idade
+        if (idade >=18 )
+        {
+            Console.WriteLine("Você é maior de idade.");
+        }
+        else
+        {
+            Console.WriteLine("Você é menor de idade.");
+        }
+    }
+}
+
+
+
+ativiade numero por extenso
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Write("Digite um número inteiro (0 a 99): ");
+
+            if (int.TryParse(Console.ReadLine(), out int numero) && numero >= 0 && numero <= 99)
+            {
+                string numeroPorExtenso = ConverterParaExtenso(numero);
+                Console.WriteLine($"Número por extenso: {numeroPorExtenso}");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Por favor, digite um número inteiro válido entre 0 e 99.");
+            }
+        }
+    }
+
+    static string ConverterParaExtenso(int numero)
+    {
+        string[] unidades = { "", "Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove" };
+        string[] especiaisDezAteDezenove = { "Dez", "Onze", "Doze", "Treze", "Quatorze", "Quinze", "Dezesseis", "Dezessete", "Dezoito", "Dezenove" };
+        string[] dezenas = { "", "", "Vinte", "Trinta", "Quarenta", "Cinquenta", "Sessenta", "Setenta", "Oitenta", "Noventa" };
+
+        if (numero >= 0 && numero <= 9)
+        {
+            return unidades[numero];
+        }
+        else if (numero >= 10 && numero <= 19)
+        {
+            return especiaisDezAteDezenove[numero - 10];
+        }
+        else
+        {
+            int unidade = numero % 10;
+            int dezena = numero / 10;
+            return $"{dezenas[dezena]} {(unidade > 0 ? "e " + unidades[unidade] : "")}";
+        }
+    }
+}
 
