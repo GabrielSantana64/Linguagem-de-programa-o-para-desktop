@@ -94,3 +94,52 @@ class Despesa
         Valor = valor;
     }
 }
+
+
+
+PARTE 2 15/01
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] pilotos = new string[] { "Ayrton Senna", "Michael Schumacher", "Lewis Hamilton", "Alain Prost" };
+
+        Console.WriteLine(pilotos[2]); // Exibe o terceiro piloto (índice 2) - Lewis Hamilton
+        Console.WriteLine();
+
+        pilotos[2] = "Rubens Barrichello"; // Altera o terceiro piloto para "Rubens Barrichello"
+
+        foreach (string piloto in pilotos)
+        {
+            Console.WriteLine(piloto);
+        }
+    }
+}
+
+using System; Esta linha nos permite utilizar funcionalidades basicas do sistema atraves do namespace System que é essencial em C#
+
+class Program Aqui estamos criando uma classe chamada Program que geralmente é onde colocamos o codigo principal de um programa C#
+
+static void Main() Este é o ponto de entrada do programa o metodo principal chamado Main ele é estatico (static) porque é chamado sem criar uma instancia da classe Program e retorna void porque não devolve nenhum valor
+
+string[] pilotos = new string[] { "Ayrton Senna", "Michael Schumacher", "Lewis Hamilton", "Alain Prost" }; Estamos criando um array de strings chamado pilotos e preenchendo-o com os nomes dos pilotos o operador new aloca espaço na memoria para o array
+
+Console.WriteLine(pilotos[2]); Isso exibe o terceiro elemento do array pilotos usando Console.WriteLine como os arrays em C# começam do índice zero pilotos[2] acessa o terceiro elemento que é "Lewis Hamilton" e imprime esse valor na tela
+
+Console.WriteLine(); Esta linha apenas imprime uma linha em branco na tela sendo util para separar visualmente as saídas no console
+
+pilotos[2] = "Rubens Barrichello"; Aqui estamos alterando o terceiro elemento do array pilotos para "Rubens Barrichello" substituindo "Lewis Hamilton" por este novo valor
+
+foreach (string piloto in pilotos) Inicia um loop foreach que percorre cada elemento do array pilotos. Em cada iteração o valor atual e armazenado na variável piloto
+
+Console.WriteLine(piloto); Dentro do loop utilizamos Console.WriteLine para imprimir cada nome de piloto na tela o loop foreach percorre todos os elementos do array exibindo cada nome de piloto neste caso específico
+
+
+
+
+
+
+
